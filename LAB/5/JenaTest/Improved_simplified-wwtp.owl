@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3"
+     xml:base="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión simplificada de WaWO+ para una ontología de cuencas de río.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasPollutant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasPollutant">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Pollutant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#pollutantGenerated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#pollutantGenerated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PollutantAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#pollutantTreated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#pollutantTreated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#TreatmentPlant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PollutantAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Amount"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#maximumProduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#maximumProduction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#storageAvailability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#storageAvailability">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasValue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#TreatmentPlant"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#wastePerProduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#wastePerProduction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Amount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Amount">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Chemicals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Discharge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Discharge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Food">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Entity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#pollutantGenerated"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Wastewater"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Ironworks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Ironworks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PaperMill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PaperMill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Pollutant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Pollutant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PollutantAmount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PollutantAmount">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Amount"/>
+        <rdfs:comment>Esta cantidad representa una concentración en gr/m3</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#River -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#River">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Slaughterhouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Slaughterhouse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Store -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Store">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Treat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Treat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#TreatmentPlant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#TreatmentPlant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Wastewater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Wastewater">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#WaterMass"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#hasPollutant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PollutantAmount"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#WaterMass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#WaterMass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#FoodSuspendedSolidsGeneration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#FoodSuspendedSolidsGeneration">
+        <untitled-ontology-3:hasPollutant rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#SuspendedSolids"/>
+        <untitled-ontology-3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</untitled-ontology-3:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#FoodWastewater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#FoodWastewater"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Hacendoso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Hacendoso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Morrich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Morrich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Food"/>
+        <untitled-ontology-3:pollutantGenerated rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#FoodSuspendedSolidsGeneration"/>
+        <untitled-ontology-3:maximumProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</untitled-ontology-3:maximumProduction>
+        <untitled-ontology-3:wastePerProduction rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</untitled-ontology-3:wastePerProduction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PlantaBesos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PlantaBesos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#TreatmentPlant"/>
+        <untitled-ontology-3:pollutantTreated rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PlantaBesosSuspendedSolidsTreated"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PlantaBesosSuspendedSolidsTreated -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#PlantaBesosSuspendedSolidsTreated">
+        <untitled-ontology-3:pollutantTreated rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#SuspendedSolids"/>
+        <untitled-ontology-3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</untitled-ontology-3:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#SanManuel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#SanManuel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#SuspendedSolids -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#SuspendedSolids"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

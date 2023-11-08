@@ -1,0 +1,112 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:OriginalOntology="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:untitled-ontology-3="http://www.semanticweb.org/salvarez/ontologies/2019/2/untitled-ontology-3#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Amount">
+    <owl:equivalentClass rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#hasValue">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Amount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Treat">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Action"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Entity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Discharge">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Action"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:intersectionOf rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#TreatmentPlant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#PlantaBesos">
+    <OriginalOntology:pollutantTreated rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#PlantaBesosSuspendedSolidsTreated"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#TreatmentPlant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#maximumProduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Ironworks">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Industry"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#hasPollutant">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Pollutant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Wastewater"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#pollutantGenerated"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Wastewater">
+    <rdfs:subClassOf rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#PollutantAmount">
+    <rdfs:comment>Esta cantidad representa una concentración en gr/m3</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Amount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#WaterMass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#PollutantAmount"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#hasPollutant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Action">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:intersectionOf rdf:nodeID="A6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#storageAvailability">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#TreatmentPlant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Versión simplificada de WaWO+ para una ontología de cuencas de río.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#pollutantTreated">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#PollutantAmount"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#TreatmentPlant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#SuspendedSolids">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Food">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Industry"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Chemicals">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Industry"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#PlantaBesosSuspendedSolidsTreated">
+    <OriginalOntology:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</OriginalOntology:hasValue>
+    <OriginalOntology:pollutantTreated rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#SuspendedSolids"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Slaughterhouse">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salvarez/ontologies/OriginalOntology#Industry"/>
+  

@@ -1,0 +1,23 @@
+
+--Hello World Agent Linux
+Plataforma agents i interfície:
+java -cp ./lib/jade.jar:./dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -gui &
+
+Exemples d'execició d'Agents:
+java -cp ./lib/jade.jar:./dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container HelloTio:org.upc.edu.Behaviours.HelloWorldAgent\("Que","pasa","tio"\) &
+java -cp ./lib/jade.jar:./dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container CyclicAgentTest:org.upc.edu.Behaviours.CyclicBehaviourAgent\ &
+java -cp ./lib/jade.jar:./dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container OneShotAgentTest:org.upc.edu.Behaviours.OneShotBehaviourAgent\ &
+java -cp ./lib/jade.jar:./dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container TickerAgentTest:org.upc.edu.Behaviours.TickerBehaviourAgent\ &
+java -cp ./lib/jade.jar:./dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container WakerAgentTest:org.upc.edu.Behaviours.WakerBehaviourAgent\ &
+
+mira docu jena per especificar el contenidor:
+    o -container <nom> (?)
+    o -<nom> (?)
+
+
+--Complex agents based on protocols
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -gui &
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Timmy:org.upc.edu.Protocols.ContractNetResponderAgent\("YES","6"\) & 
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Jimmy:org.upc.edu.Protocols.ContractNetResponderAgent\("YES","4"\) &
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Winnie:org.upc.edu.Protocols.ContractNetResponderAgent\("NO","0"\) & 
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Sesilu:org.upc.edu.Protocols.ContractNetInitiatorAgent\("Timmy","Jimmy","Winnie"\)

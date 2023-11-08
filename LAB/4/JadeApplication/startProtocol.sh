@@ -1,0 +1,5 @@
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -gui &
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Timmy:org.upc.edu.Protocols.ContractNetResponderAgent\("YES","6"\) & 
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Jimmy:org.upc.edu.Protocols.ContractNetResponderAgent\("YES","4"\) &
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Winnie:org.upc.edu.Protocols.ContractNetResponderAgent\("NO","0"\) & 
+java -cp /home/igomez/Jade/jade/lib/jade.jar:/home/igomez/NetBeansProjects/JadeApplication/dist/JadeApplication.jar jade.Boot -local-host 127.0.0.1 -container Sesilu:org.upc.edu.Protocols.ContractNetInitiatorAgent\("Timmy","Jimmy","Winnie"\)
